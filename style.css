@@ -1,0 +1,71 @@
+html {
+  background: url(http://az616578.vo.msecnd.net/files/2016/07/31/636055955513037869162211565_movie.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+}
+
+#footer a:link {
+  color: pink;
+}
+
+#footer a:visited {
+  color: tomato;
+}
+
+#footer a:hover {
+  color: darkblue;
+}
+
+#footer {
+  background: lightblue;
+  margin-bottom: 0px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  margin-top: 23%;
+  right: 10%;
+  -webkit-box-shadow: 2px 2px 16px 13px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 2px 2px 16px 13px rgba(0, 0, 0, 0.64);
+  box-shadow: 2px 2px 16px 13px rgba(0, 0, 0, 0.64);
+}
+
+button {
+  color: tomato;
+  background: pink;
+  font-size: 18px;
+  transition: background-color 0.2s ease-out;
+  cursor: pointer;
+}
+
+button:hover {
+  color: tomato;
+  text-decoration: none;
+}
+
+button:active, button:hover {
+  outline: none;
+  text-decoration: none;
+}
+
+button a {
+  text-decoration: none;
+}
+
+.inner-wrapper {
+  border: 1px dashed #95a5a6;
+  height: auto;
+  margin-top: 23%;
+  border-radius: 4px;
+  position: absolute;
+  font-size: 15px;
+  color: pink;
+  background: darkblue;
+}

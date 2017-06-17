@@ -1,0 +1,101 @@
+<html>
+  <head> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	
+	<link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  
+ <body ng-app="myApp">
+ <div class="wrapper">
+    <div class="menu">
+      <button class="btn-block"><a href="#!">Home
+      </button></br>
+      <button class="btn-block"><a href="#!Synopsis">Synopsis</a>
+      </button></br>
+      <button class="btn-block" ><a href="#!Videos">Videos</a>
+      </button></br>
+      <button class="btn-block" ><a href="#!Gallery">Gallery</a>
+      </button></br>
+      <button class="btn-block" ><a href="#!Poster">Poster</a>
+      </button></br>
+    </div>
+
+<div ng-view></div>
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.htm",
+        controller : "home"
+    })
+    .when("/Synopsis", {
+        templateUrl : "synopsis.htm",
+        controller : "Synopsis"
+    })
+    .when("/Videos", {
+        templateUrl : "videos.htm",
+        controller : "Videos"
+    })
+   .when("/Gallery", {
+        templateUrl : "allery.htm",
+        controller : "Gallery"
+    })
+   .when("/Poster", {
+        templateUrl : "Poster.htm",
+        controller : "Poster"
+    });
+});
+app.controller("homeCtrl", function ($scope) {
+    $scope.msg = "I love home";
+});
+app.controller("synopsisCtrl", function ($scope) {
+    $scope.msg = "I love synopsis";
+});
+app.controller("videosCtrl", function ($scope) {
+    $scope.msg = "I love videos";
+});
+app.controller("galleryCtrl", function ($scope) {
+    $scope.msg = "I love Gallery";
+});
+app.controller("posterCtrl", function ($scope) {
+    $scope.msg = "I love poster";
+});
+</script>
+
+
+ </div> <!-- end of wrapper> -->
+
+
+
+
+
+    
+    
+    <div class="text-center" id="footer"> <!-- for footer -->
+      <div class="col-xs-6">
+      <h5><a href="http://www.eleftheriabatsou.com" target="_blank">Eleftheria</a> | <a href="https://codepen.io/EleftheriaBatsou" target="_blank">Projects</a> | <a href="https://www.youtube.com/channel/UCC-WwYv3DEW7Nkm_IP6VeQQ" target="_blank"> Coding videos </a></h5>
+      </div>
+      <!-- social media -->
+      <div class="col-xs-6 text-primary">
+        <a href="https://twitter.com/BatsouElef" target="_blank">
+     <img src="https://left.gr/sites/all/themes/newleft/images/socialicons/twitter.png" 
+      style="text-align:center" alt="twitter"> 
+    </a>
+         <a href="https://github.com/EleftheriaBatsou" target="_blank">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqSttU57LZvtB2Y77j2E2EkC6qgiTbYjVK75XU2SOzUXz2EFjX" 
+      style="text-align:center" alt="github"> 
+    </a>
+        <a href="https://www.youtube.com/channel/UCC-WwYv3DEW7Nkm_IP6VeQQ" target="_blank">
+     <img src="http://mx1.salsacycles.com/images/template_images/icons/icon-youtube.png" 
+       style="text-align:center" alt="youtube"> 
+    </a>
+      </div>
+    </div> <!-- end footer -->
+    
+    
+    
+  </body>
+  
+ </html>
